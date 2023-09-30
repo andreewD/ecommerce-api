@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @OpenAPIDefinition(servers = {
-        @Server(url = "/", description = "Default Server URL")
+        @Server(url = "/", description = "Default Server URL"),
+        @Server(url = "https://ecommerce-api-production-1642.up.railway.app", description = "Prod server URL")
 })
 public class SwaggerConfiguration {
     @Bean
