@@ -62,12 +62,10 @@ public class CardValidationUseCase {
 
     private boolean validateExpirationDate(String expirationDate) {
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/yyyy");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/yy");
             LocalDate dateFormatted = LocalDate.parse(expirationDate, formatter);
-
-            // Check if the expiration date is not in the past
             LocalDate currentDate = LocalDate.now();
-            return !dateFormatted.isBefore(currentDate);
+            return dateFormatted.isAfter(currentDate);
         } catch (Exception e) {
             // Invalid date format or parsing error
             return false;
