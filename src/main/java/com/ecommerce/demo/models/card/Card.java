@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 public class Card {
-    @Size(min = 16, max = 19, message = "PAN must be between 16 and 19 characters")
+    @Size(min = 16, max = 19, message = "Card Number must be between 16 and 19 characters")
     private String pan;
     @Size(min = 3, max = 4, message = "CVV must be between 3 and 4 characters")
     private String cvv;
