@@ -1,5 +1,5 @@
-ECOMMERCE PORTAL
-----------------
+ECOMMERCE API
+=============
 
 DEPENDENCIES
 ------------
